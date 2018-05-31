@@ -38,10 +38,6 @@ Either point jenkins to a working repo + jenkinsfile or paste the following code
 pipeline {
     agent any
 
-    tools {
-       go "Go 1.10.2"
-    }
-
     stages {
         stage('Build Bin') {
             steps {
