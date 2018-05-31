@@ -25,6 +25,9 @@ Passing in -p commands allows the containers to also be accessed with localhost:
 
 Next the [influxDB plugin](https://wiki.jenkins.io/display/JENKINS/InfluxDB+Plugin) for Jenkins will be required. Install it on the running Jenkins and the configure it to work with your local influxDB instance.
 
+![alt text](https://github.com/peterlamar/influxops/blob/master/img/influxconfig.png "Jenkins influxDB config")
+
+
 Next install any required tools to run your specific project. I use a golang example so I had to install the [go plugin](https://wiki.jenkins.io/display/JENKINS/Go+Plugin) and configure it in the [manage jenkins/tools](https://www.safaribooksonline.com/library/view/devops-bootcamp/9781787285965/b02a0f03-339c-4243-ac0c-1d9d2ab6af4a.xhtml) section.
 
 ## Step 3 - Run a pipeline and check the stats in influxDB
