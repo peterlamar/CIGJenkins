@@ -1,6 +1,6 @@
 # Cronograf, Influxdb, Grafana (CIG) + Jenkins
 
-Here are the basics to get a local Cronograf, InfluxDB, Grafana and Jenkins running together. Cronograf, Influx and Grafana are affectionately named the 'CIG' stack. 
+Here are the basics to get a local Cronograf, InfluxDB, Grafana and Jenkins running together. Cronograf, Influx and Grafana are affectionately named the 'CIG' stack. This allows you to collect Jenkins events, aggregate them, and view them in a customizable dashboard. Its a powerful pattern for a team or a set of teams that relies on Jenkins and wants more insight into usage and success/failure of Jenkins actions.
 
 # 1 - Run and connect components locally
 
