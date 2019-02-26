@@ -12,12 +12,18 @@ understand a topic.
 
 This can be done with docker and a few quick commands.
 
-```
+```bash
 docker network create influxdb
 docker run -d --name=influxdb --net=influxdb -p 8086:8086 influxdb
 docker run -d -p 8888:8888 --net=influxdb chronograf --influxdb-url=http://influxdb:8086
 docker run -d -p 8080:8080 --net=influxdb -p 50000:50000 -v /home/plamar/dev/jenkins:/var/jenkins_home jenkins/jenkins:latest
 
+```
+
+Or if you like, trigger the shell script that performs these steps
+
+```bash
+./influxjenkinschronoup.sh
 ```
 
 These commands create a [docker network](https://docs.docker.com/network/). The network is a bridge network, a local address space of 172.18.0.0/16, that allows the different components to find
@@ -91,8 +97,14 @@ pipeline {
 
 This step is fairly straight forward. First stand up Grafana and connect it to the existing Docker network
 
-```
+```bash
 docker run -d --name=grafana --net=influxdb -p 3000:3000  grafana/grafana
+```
+
+Or shell script with this step
+
+```
+./graphanaup.sh
 ```
 
 Once its running, visit localhost:3000 and config Grafana to communicate with our influxDB instance.
