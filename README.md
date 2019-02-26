@@ -123,7 +123,8 @@ Or shell script with this step
 ./graphanaup.sh
 ```
 
-Once its running, visit localhost:3000 and config Grafana to communicate with our influxDB instance.
+Once its running, visit localhost:3000 and config Grafana to communicate with our influxDB instance. The defaul
+[login](https://hub.docker.com/r/grafana/grafana/) is admin/admin and you will be prompted to change it upon login. 
 
 ![alt text](https://github.com/peterlamar/influxops/blob/master/img/grafanaconfig.png "Grafana influxdb config")
 
