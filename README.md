@@ -7,8 +7,7 @@ Here are the basics to get a local Cronograf, InfluxDB, Grafana and Jenkins runn
 ## Step 1a - Docker commands
 
 Step 1 is to get the components running locally in the simplest manner possible.
-This is not a production configuration but rather steps to follow to fully
-understand a topic.
+This is not a production configuration but rather steps to follow to understand a topic.
 
 This can be done with docker and a few quick commands.
 
