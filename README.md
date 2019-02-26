@@ -12,15 +12,31 @@ understand a topic.
 
 This can be done with docker and a few quick commands.
 
+First we create a [docker network](https://docs.docker.com/network/) for the components to communicate with eachother
+
 ```bash
 docker network create influxdb
-docker run -d --name=influxdb --net=influxdb -p 8086:8086 influxdb
-docker run -d -p 8888:8888 --net=influxdb chronograf --influxdb-url=http://influxdb:8086
-docker run -d -p 8080:8080 --net=influxdb -p 50000:50000 -v /home/plamar/dev/jenkins:/var/jenkins_home jenkins/jenkins:latest
-
 ```
 
-Or if you like, trigger the shell script that performs these steps
+Then we standup [influxdb](https://github.com/influxdata/influxdb) on the network
+
+```bash
+docker run -d --name=influxdb --net=influxdb -p 8086:8086 influxdb
+```
+
+Next [chronograf](https://github.com/influxdata/chronograf) As a visualization on influxdb
+
+```bash
+docker run -d -p 8888:8888 --net=influxdb chronograf --influxdb-url=http://influxdb:8086
+```
+
+Finally Jenkins, so that we may consume events and display them
+
+```bash
+docker run -d -p 8080:8080 --net=influxdb -p 50000:50000 jenkins/jenkins:latest
+```
+
+Or if you like, trigger the shell script that performs all these steps
 
 ```bash
 ./influxjenkinschronoup.sh
