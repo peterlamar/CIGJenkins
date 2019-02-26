@@ -132,3 +132,24 @@ Once its running, visit localhost:3000 and config Grafana to communicate with ou
 Next, configure a straight forward dashboard to get started with Jenkins statistics. 
 
 ![alt text](https://github.com/peterlamar/influxops/blob/master/img/grafanajenkinsdash.png "Grafana jenkins config")
+
+Congratulations, you have the cluster running!
+
+## Cleanup, if desired
+
+Stop all local containers: 
+
+```
+docker kill $(docker ps -q)
+```
+
+Delete all local containers: 
+
+```
+docker rm $(docker ps -a -q)
+```
+
+Delete all images: 
+```
+docker rmi $(docker images -q)
+```
