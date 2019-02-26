@@ -1,6 +1,6 @@
 # influxops (TIG Stack)
 
-Here are the basics to get a local Telegraph, InfluxDB, Jenkins and Grafana running together. This is affectionately named the 'TIG' or Telegraph, InfluxDB and Grafana stack. 
+Here are the basics to get a local Cronograf, InfluxDB, Jenkins and Grafana running together. Cronograf, Influx and Grafana are affectionately named the 'CIG' stack. 
 
 # 1 - Run and connect components locally
 
